@@ -70,7 +70,7 @@ NoteRouter
   .delete((req, res, next) => {
     NoteService.deleteNote(
       req.app.get('db'),
-      req.params.Note_id
+      req.params.id
     )
       .then(numRowsAffected => {
         res.status(204).end()

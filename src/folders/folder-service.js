@@ -23,13 +23,13 @@ const NotefulService = {
   
     deleteUser(knex, id) {
       return knex('folders')
-        .where({ id })
+        .where('id', id)
         .delete()
     },
   
     updateUser(knex, id, newUserFields) {
       return knex('folders')
-        .where({ id })
+        .where('id', id)
         .update(newUserFields)
     },
   }

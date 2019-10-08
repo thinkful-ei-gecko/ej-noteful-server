@@ -20,13 +20,13 @@ const NoteService = {
   
     deleteNote(knex, id) {
       return knex('notes')
-        .where({ id })
+        .where('id', id)
         .delete()
     },
   
     updateNote(knex, id, newNoteFields) {
       return knex('notes')
-        .where({ id })
+        .where('id', id)
         .update(newNoteFields)
     },
   }
