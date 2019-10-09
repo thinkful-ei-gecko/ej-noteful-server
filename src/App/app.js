@@ -34,6 +34,9 @@ app.use(function errorHandler(error, req, res, next) {
        res.status(500).json(response)
      })
 
-app.use(cors())
+app.use(cors({
+  'allowedHeaders': ['Content-Type'],
+  'methods': 'GET,PATCH,POST,DELETE'
+}))
 
 module.exports = app
